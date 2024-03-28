@@ -5,10 +5,11 @@ import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
+import MovingArrow from './Arrow';
 import { Logo } from './Logo';
 
 const Hero = () => (
-  <Background color="bg-gray-100">
+  <Background color="bg-white-300">
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
@@ -26,17 +27,18 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
+            Wir helfen ihnen eine{' '}
+            <span className="text-primary-500">helfende Hand</span> zu finden!
           </>
         }
-        description="The easiest way to build a React landing page in seconds."
+        description="-oder eine zu werden!"
         button={
           <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
+            <Button xl>Zur App</Button>
           </Link>
         }
       />
+      <MovingArrow />
     </Section>
   </Background>
 );
