@@ -10,17 +10,8 @@ import { Logo } from './Logo';
 
 const Hero = () => (
   <Background color="bg-white-300">
-    <Section yPadding="py-6">
-      <NavbarTwoColumns logo={<Logo xl />}>
-        <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            GitHub
-          </Link>
-        </li>
-        <li>
-          <Link href="/">Sign in</Link>
-        </li>
-      </NavbarTwoColumns>
+    <Section h-full yPadding="py-6">
+      <NavbarTwoColumns logo={<Logo xl />}></NavbarTwoColumns>e
     </Section>
 
     <Section yPadding="pt-20 pb-32">
@@ -33,7 +24,7 @@ const Hero = () => (
         }
         description="-oder eine zu werden!"
         button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
+          <Link href="#">
             <Button xl>Zur App</Button>
           </Link>
         }
