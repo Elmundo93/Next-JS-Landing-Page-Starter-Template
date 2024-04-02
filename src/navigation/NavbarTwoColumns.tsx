@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 
 type INavbarProps = {
   logo: ReactNode;
-  children: ReactNode;
 };
 
 const NavbarTwoColumns = (props: INavbarProps) => (
@@ -13,22 +12,22 @@ const NavbarTwoColumns = (props: INavbarProps) => (
     </div>
 
     <nav>
-      <ul className="navbar flex items-center text-xl font-medium text-gray-800">
-        {props.children}
+      <ul className="navbar flex items-center justify-between text-xl font-medium text-gray-800">
+        <li className="border-b border-slate-300 px-10 transition-all duration-500 ease-out hover:border-primary-400 hover:text-primary-500">
+          <Link href="#about">Über Uns</Link>
+        </li>
+        <li className="border-b border-slate-300 px-10 transition-all duration-500 ease-out hover:border-primary-400 hover:text-primary-500 ">
+          <Link href="/" className="dropdown">
+            Wissenswertes
+            <ul className="dropdown-content">
+              <li>Unsere Satzung</li>
+              <li>Alles über die Anmeldung</li>
+              <li>Kontakt</li>
+            </ul>
+          </Link>
+        </li>
       </ul>
     </nav>
-
-    <style jsx>
-      {`
-        .navbar :global(li:not(:first-child)) {
-          @apply mt-0;
-        }
-
-        .navbar :global(li:not(:last-child)) {
-          @apply mr-5;
-        }
-      `}
-    </style>
   </div>
 );
 
